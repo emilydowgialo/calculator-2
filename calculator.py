@@ -16,7 +16,9 @@ while value_returned == False:
     input = raw_input("> ") 
     tokens = input.split(" ") # parsing user's input by space
     num1 = int(tokens[1]) # converting user input into integer
-    num2 = int(tokens[2]) # converting user input into integer
+    
+    if len(tokens) > 2: # accomodates additional parameters
+        num2 = int(tokens[2]) # converting user input into integer
 
     if tokens[0] == "+": # add function 
         print add(num1,num2) # calling the add function from arithmetic.py module
@@ -37,3 +39,18 @@ while value_returned == False:
     if tokens[0] == "square":
         print square(num1)
         value_returned = True
+
+    if tokens[0] == "cube":
+        print cube(num1)
+        value_returned = True
+
+    if tokens[0] == "pow":
+        print power(num1, num2)
+        value_returned = True
+
+    if tokens[0] == "mod":
+        print mod(num1, num2)
+        value_returned = True
+
+        
+
