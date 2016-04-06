@@ -13,11 +13,27 @@ value_returned = False
 
 
 while value_returned == False:
-    input = raw_input("> ")
-    tokens = input.split(" ")
-    num1 = int(tokens[1])
-    num2 = int(tokens[2])
+    input = raw_input("> ") 
+    tokens = input.split(" ") # parsing user's input by space
+    num1 = int(tokens[1]) # converting user input into integer
+    num2 = int(tokens[2]) # converting user input into integer
 
-    if tokens[0] == "+":
-        print add(num1,num2)
+    if tokens[0] == "+": # add function 
+        print add(num1,num2) # calling the add function from arithmetic.py module
+        value_returned = True # breaking the loop
+
+    if tokens[0] == "-":  # subtract function
+        print subtract(num1, num2) # calling the subtr function from arithmetic.py module
+        value_returned = True # breaking the loop
+
+    if tokens[0] == "*": # multiply function
+        print multiply(num1, num2) # calling the multiply function from arithmetic.py module
+        value_returned = True # breaking the loop
+
+    if tokens[0] == "/":  # divide function
+        print divide(num1, num2) # calling the divide function from arithmetic.py module
+        value_returned = True # breaking the loop
+
+    if tokens[0] == "square":
+        print square(num1)
         value_returned = True
