@@ -18,13 +18,18 @@ def calc_function():
         while value_returned == False:
             input = raw_input("> ") 
             tokens = input.split(" ") # parsing user's input by space
-            num1 = int(tokens[1]) # converting user input into integer
+            token_list = tokens[1:]
+
+            # num1 = int(tokens[1]) # converting user input into integer
             
-            if len(tokens) > 2: # accomodates additional parameters
-                num2 = int(tokens[2]) # converting user input into integer
+            # if len(tokens) == 2: # accomodates additional parameters
+            #     num2 = int(tokens[2]) # converting user input into integer
+
+            # if len(tokens) > 2:
+            #     additional_numbers = int(tokens[1:])
 
             if tokens[0] == "+": # add function 
-                print add(num1,num2) # calling the add function from arithmetic.py module
+                print add(token_list) # calling the add function from arithmetic.py module
                 value_returned = True # breaking the loop
 
             if tokens[0] == "-":  # subtract function
