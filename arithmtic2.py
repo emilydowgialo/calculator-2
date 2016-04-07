@@ -1,5 +1,9 @@
-def add(num1, num2):
-    return num1 + num2
+
+
+def add(input_list): 
+    for x in input_list: # sum elements in the list with a loop
+        x = int(x)
+        sum(x)
 
 
 def subtract(num1, num2):
@@ -32,3 +36,5 @@ def power(num1, num2):
 
 def mod(num1, num2):
     return num1 % num2
+
+add([2,3,4,6])
